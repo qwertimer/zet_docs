@@ -1,0 +1,3 @@
+[submodule "docs/zet"]
+	path = docs/zet
+	url = https://github.com/qwertimer/zet
