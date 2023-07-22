@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# Home
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Hi there, welcome, i'm qwertimer, i am a
+mechatronic engineer working in the embedded linux space. I have a
+keen interest in Linux, Python, Go and Bash. 
 
-## Commands
+I love learning new things and enjoy mucking around with homelabs, docker and anything related to linux. Check out my zets for all things related to my learning.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.

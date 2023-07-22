@@ -1,6 +1,10 @@
 site_name: Personal Docs
-nav:
-  - Home: index.md
-  - About: about.md
+  #nav:
+  #- Home: index.md
+  #- About: about.md
+  #- zets: /zet/
+
 theme: readthedocs
+repo_url: https://github.com/qwertimer/zet_docs
+repo_name: 'Github'
 
