@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Getting started with minikube - Personal Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Getting started with minikube";
+        var mkdocs_page_input_path = "zet/20210910140643/README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Personal Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../zettel/">Zettelkasten</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Zet</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210517010658</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210517010658/">Getting started with Zets</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210517011245</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210517011245/">Testing git init</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210517012223</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210517012223/">Configuring zet for my systems</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210518001608</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210518001608/">Working with SSH</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210518002043</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210518002043/">Why build a homelab</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210528140148</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210528140148/">Working with vim magics.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210530121615</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210530121615/">Building up a log and todo zet</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210530135725</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210530135725/">Setting up multiple zets</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210531004017</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210531004017/">Working with Lynx</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210531004309</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210531004309/">TMUX key bindings for fast movement</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210531005226</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210531005226/">TMUX sessions and configuring startup scripts.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210602012826</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210602012826/">Blue eyes are strange</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210602032711</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210602032711/">Learning some bash - Part 1</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210602033401</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210602033401/">Learning Bash - Part 2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210603121623</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210603121623/">Creating switches in shell</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210603232931</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210603232931/">Building Jetson clusters</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210605125400</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210605125400/">Getting IRC running with weechat.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210607102038</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210607102038/">Emailing me my public IP when it updates</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210607115958</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210607115958/">Configuring Mutt for email</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210608040257</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210608040257/">Working with Tar files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210608100508</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210608100508/">Fun with colours in the terminal</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210608120528</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210608120528/">Parameter Expansion</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210608235223</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210608235223/">Globbing in terminal</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210609012706</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210609012706/">Using vimagics to get cli interface support.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210609020532</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210609020532/">Idea for building a local search based utility for zets</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210615124539</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210615124539/">TMUX has a plugin manager</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210621002121</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210621002121/">lsio have created a container called webtop</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210622234930</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210622234930/">f-strings have some neat features</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210628053612</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210628053612/">Learning golang by building a website</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210630071217</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210630071217/">Getting Started with Go</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210630083124</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210630083124/">There is a tiling window manager for mac</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210703123958</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210703123958/">Learning Go [part 2]</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210704130642</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210704130642/">Learning GO [part 3]</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210704135451</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210704135451/">Lynx is a great program for reading long web articles</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210705073723</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210705073723/">Imports and packages in python</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210705134019</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210705134019/">Building webservices in Go</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210706122957</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210706122957/">Learning Go [Part 4]</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210706233243</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210706233243/">Bash has dictionaries, or associative arrays</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210708121331</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210708121331/">Learning Go [Part 4]</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210712032748</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210712032748/">Fun findings in vim</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210712041529</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210712041529/">Expand multiple array strings with "{A[@]}"</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210712044909</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210712044909/">Useful bash tools</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210714023516</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210714023516/">Fun things you can do in a jupyter notebook</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210714235712</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210714235712/">docker can set just internet access for the container</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210718043805</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210718043805/">Stat command will give the mode of a file</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210718050805</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210718050805/">Removing files or directories neatly</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210718083855</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210718083855/">Check and do something with a file based on its UUID.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210718142027</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210718142027/">Shell variables can be assigned and given a value inside a printf</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210719135154</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210719135154/">bash for python</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210722005646</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210722005646/">testing zet mods</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210722021227</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210722021227/">Bash one liner to search zet titles and send to a selector.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210722043533</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210722043533/">add a newline to a variable.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210722060126</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210722060126/">Again vim integration with bash for the win</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210722064031</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210722064031/">Need to learn more about find</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210722132212</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210722132212/">Figured out what noremap means.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210724044854</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210724044854/">Line number wand !:<linenumber> magics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210725050018</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210725050018/">Useful commands to memorize and use vim [part 1]</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210725054437</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210725054437/">Learning vim copy, paste and registers to stop deleting things</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210725055000</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210725055000/">Create vim batch scripts to run multiple commands in a row.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210725055321</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210725055321/">We can operate on search matches using gn in vim</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210725133814</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210725133814/">chroot, namespaces and cgroups.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210725134549</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210725134549/">Docker runs chroot, namespaces and cgroups along with other things.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210726053841</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210726053841/">Integrating ? lynx search into vim and tmux</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210727002705</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210727002705/">pywal is a nice tool to generate terminal colour schemes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210727083410</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210727083410/">Use `"$(<"file")"` instead of cat inside scripts</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210727084401</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210727084401/">script to get a list of all the functions in a script</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210728050509</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210728050509/">test of updated zet</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210729102812</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210729102812/">IO redirection in linux</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210729110512</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210729110512/">Process substitution or <()</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210729112655</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210729112655/">Brace expansion could be used for making files in directories</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210729114017</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210729114017/">Using lynx to its full potential.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210729235836</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210729235836/">Working with arrays in bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210730075532</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210730075532/">Rob has an awesome help command that outputs as a man page</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210731064656</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210731064656/">vim copy and paste the right way</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210731124101</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210731124101/">Use `zz` in vim to recenter your screen</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210803045213</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210803045213/">Got popos installed on my surface pro</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210804064214</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210804064214/">Understanding what !} does</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210804084552</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210804084552/">Modifying robs latest zet for my pipeline.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210804123008</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210804123008/">Using read correctly in bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210804125600</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210804125600/">Using recursive descent in bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210804130056</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210804130056/">Using `=~` in bash starts regex matching</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210804131951</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210804131951/">Rather than using true and false in bash use is empty</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210805030535</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210805030535/">Deciphering robs filter function</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210805064701</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210805064701/">Using Ctrl-a z to focus pane in tmux</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210805073450</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210805073450/">Issues with setting up different ssh keys.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210806114039</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210806114039/">Nested tmux sessions can be accessed by pressing the prefix key again</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210806114626</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210806114626/">TMUX uses `Prefix + [` to enter copy mode, `Prefix + ]` for paste</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210806115250</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210806115250/">tmux session basics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210806120133</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210806120133/">tmux windows basics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210807124152</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210807124152/">How to save a file that required sudo</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210808020011</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210808020011/">When using EOF line input use -.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210809122108</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210809122108/">Use () to turn the output of a function into an array.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210810052344</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210810052344/">Found an excellent theme to use in my blog posts</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210811015906</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210811015906/">Working with the bash completion tools from rwxrob</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210812113523</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210812113523/">I have reached a point in my linux understanding</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210812114216</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210812114216/">Working with CDPATH.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210814113122</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210814113122/">Thought i'd lost all my photos on a drive today</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210816090512</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210816090512/">ls -1 to list individual files per line</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210816090915</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210816090915/">Working with find and `xargs`</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210817065558</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210817065558/">Bash [ -* ] flags</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210817234512</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210817234512/">Use `pipx` for any python program</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210817235043</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210817235043/">You should use commonmark for markdown</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210818224321</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210818224321/">Linux bash expansions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210818225907</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210818225907/">bash variable expansions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210821114620</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210821114620/">Using chroot to run my arcolinux drive</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210821115307</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210821115307/">If needing network access copy resolv.conf for chroot</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210826012326</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210826012326/">Using Grep in bash without actually calling grep</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210827063552</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210827063552/">!$ will give you the last argument of the last command.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210831115623</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210831115623/">Sourcing programs with source and .</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210831121935</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210831121935/">Multicall or omi-executable programs.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210831124324</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210831124324/">Use `python -i <program.py>` to drop into REPL after execution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210831124932</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210831124932/">If you ever need resources on how to exit python programs this is it</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210903013429</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210903013429/">Use `"${EDITOR:=vi}"` to create a shorthand for `EDITOR=${EDITOR:-vi}`</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210903024104</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210903024104/"><(something) is a process substitution and creates a named pipe</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210903102800</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210903102800/">Working with virtual Environments correctly.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210903122409</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210903122409/">Using pytest and capsys for checking errors and running tests</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210903125103</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210903125103/">Python Decorator overview</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210905102051</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210905102051/">Why use the `@property`</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210905120522</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210905120522/">Use ctrl \ to close python script if blocking Ctrl C</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210905123017</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210905123017/">Use @contextlib.contextmanager to make your own context manager</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210905124739</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210905124739/">Bling strings with $</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210906054839</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210906054839/">Ctrl P and Ctrl Q to detach a docker image</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210906124243</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210906124243/">The difference between Process Substitution and Command Substitution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210906231427</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210906231427/">jtbl to print JSON data as a table on the terminal</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210906235035</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210906235035/">Quick start with docker</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210907105047</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210907105047/">Go - 100daysofCode -- Day 1</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210908114824</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210908114824/">Go - 100daysofCode -- Day 2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210909111906</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210909111906/">Go - 100daysofCode -- Day 3</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">20210910140643</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Getting started with minikube</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210911014132</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210911014132/">Command substitution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210911033459</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210911033459/">`printf` and its abilities in bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210911065503</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210911065503/">The absolute power of chroot</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210916040516</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210916040516/">test new zet</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210927115721</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210927115721/">subclasses in python for creating overloaded classes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210927122736</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210927122736/">Using pytest to improve testing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210930022826</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210930022826/">Separate single run bash profile from run each new shell with .profile</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20210930231139</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20210930231139/">Using vipe and vidir from the moreutils package</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211005120018</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211005120018/">Use the -L option in curl to download github releases</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211006002017</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211006002017/">Using xev and awk to view keypress values</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211006002421</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211006002421/">Using a keybinding program across multiple systems</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211006002810</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211006002810/">Use yad to output a display for script help</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211012095840</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211012095840/">Use pv to add a progress bar to any pipe.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211012234810</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211012234810/">Running random commands is always bad</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211013120536</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211013120536/">Found this test from a company looking to hire someone.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211019053929</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211019053929/">Using rich in python</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211024220524</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211024220524/">Reinforcing what i have learnt by using it in the terminal</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211025023420</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211025023420/">New programs to play with using fzf</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211025030316</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211025030316/">Developing a userguide to remember the programs i installed and configured in a certain way</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211025030953</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211025030953/">vim command shortcut to save readonly files.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211025104638</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211025104638/">Mental Note for running jupyter lab</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211103003842</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211103003842/">Configuring Docker and using shortcut commands</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211103013656</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211103013656/">Broken Zet test</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211103032632</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211103032632/">TIL -r can be added after cp and rm</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211105213546</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211105213546/">Interesting article on sideloading software into a docker container</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211107231021</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211107231021/">Useful Vim commands</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211110121809</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211110121809/">Configuring sxhkd for gnome and bsp is fun</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211110223954</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211110223954/">Get good at git</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211110230335</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211110230335/">Using realpath when creating symlinks</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211122210703</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211122210703/">Mimic cat in pure bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211122210928</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211122210928/">Mimic cut in pure bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211122211310</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211122211310/">Get wc using pure bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211122211712</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211122211712/">Replace grep with bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211123105419</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211123105419/">Using sys folder to access system information</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211123111358</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211123111358/">We can modify wget and curl to use different browser agents</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211123111630</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211123111630/">Use -C in wget or -c - in curl to pick up where you left off</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211123112016</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211123112016/">Instead of using cut, grep or awk to get things like UID</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211123112736</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211123112736/">Pure bash implementation of the wc command with -w flag</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211123113320</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211123113320/">Bash has sed like substitution capabilities built in</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211123231426</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211123231426/">Use nmap to check network and poll for ssh port</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211126055005</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211126055005/">Use !$ to expand last parameter of most recent command</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211130011908</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211130011908/">Incorporating fastcore into everday python work</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211130213831</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211130213831/">smug - a simple tmux session manager</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211208030540</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211208030540/">Useful curl Note - Getting the latest version number from a github project</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211208104628</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211208104628/">Parallelising a process in bash</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20211209205047</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20211209205047/">Vim tricks: Using gf to open file below cursor and extending it with a new mapping</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220111030349</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220111030349/">forward a docker program to the display with -v</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220112032139</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220112032139/">Cleaning up docker images with awk and xargs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220117033343</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220117033343/">Rob had a zet about vim `K`</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220126232651</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220126232651/">Creating a better homepage with github</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220127200825</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220127200825/">Ensuring docker reruns updated code</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220127205826</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220127205826/">Running github actions locally with act</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220217101827</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220217101827/">Use tree to show a structured view of a folder.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220313001804</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220313001804/">Use `sudo update-alternatives --config editor` to change default</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220319013625</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220319013625/">Use `newgrp docker` to remove the need to restart computer</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220320105415</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220320105415/">Use run-parts with a folder to run all the iterable files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220327203445</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220327203445/">Default configurations for ufw</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220329022928</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220329022928/">Having multiple git accounts and pushing code</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220329114125</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220329114125/">editing a remote file directly in local vim</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220419050313</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220419050313/">Using ansible-vault encrypt is the simplest way to configure</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220429131823</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220429131823/">Using Ansible block function allows grouping tasks</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220429132715</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220429132715/">Use --start-at-task and --step to move through playbooks in dev</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220502132007</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220502132007/">Quick tutorial on chroot to fix a broken install</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220511124942</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220511124942/">Interesting tool for getting only an incremental update of ISO</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220512092746</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220512092746/">New vim commands to remember</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220603120853</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220603120853/">Check out rclone for cloud storage backup tool</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220603131741</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220603131741/">Useful python profile tool chain</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220620021735</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220620021735/">Use paramiko if you need to run ssh in python</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220620133522</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220620133522/">Interfacing plex with tailscale in docker</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220717073209</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220717073209/">Extracting app images and moving the Application to /usr/bin</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220813111811</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220813111811/">rich inspect module is amazing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220813111934</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220813111934/">Using libtmux to build tmux sessions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220813112106</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220813112106/">The power of Typer</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220813112523</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220813112523/">Simple terminal tools for python</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220820043840</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220820043840/">Getting started with FARM (FastAPI, React, MongoDB)</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220824013036</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220824013036/">testing delete</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220827112635</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220827112635/">Simple quick way to remove .env from git history</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220827114114</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220827114114/">Using !! on cli with string replacements</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220827132613</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220827132613/">Use sudo install <file> as a way of installing binaries.</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220919121213</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220919121213/">Useful tool in Go</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220920110247</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220920110247/">Why has it taken so long to figure out git restore</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220925060111</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220925060111/">Some awesome Go CLI tools</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220925061557</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220925061557/">Use lipgloss for go tui styling</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20220929224751</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20220929224751/">Learning about rauc files</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221001114802</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221001114802/">Use ithub.com/pkg/errors to wrap errors up the call stack</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221010070312</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221010070312/">Test file</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221011035050</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221011035050/">Using netstat to find port usage</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221024224210</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221024224210/">vim shortcuts</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221102093334</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221102093334/">gRPC and protobuf - the world of microservices</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221130111603</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221130111603/">Working with os/exec in Go</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221211111835</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221211111835/">Go Concurrency</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221211113110</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221211113110/">Anonymous functions in Go</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221212110758</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221212110758/">Some useful makefile configurations</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221212114728</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221212114728/">Useful ansible guard for playbooks</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221212120432</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221212120432/">Run arbitrary ansible roles without tags and main yaml</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20221214064600</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20221214064600/">Argh why does uniq not work as i want it</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230115004436</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230115004436/">Go structs and struct methods</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230131110949</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230131110949/">awk foo</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230304231507</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230304231507/">Build conditions in Go</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230403075015</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230403075015/">Working with git worktree</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230403075141</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230403075141/">Use xvfb for display in CI</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230505123336</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230505123336/">Dynaconf is an awesome configuration manager for python</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230512233755</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230512233755/">Update vim to shortcut a zet creation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230512235555</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230512235555/">Using registers in vim and vscode properly</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">20230717100116</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../20230717100116/">Semaphores in programming</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Personal Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Zet &raquo;</li>
+          <li>20210910140643 &raquo;</li>
+      <li>Getting started with minikube</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/qwertimer/zet_docs/edit/master/docs/zet/20210910140643/README.md" class="icon icon-github"> Edit on Github</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="getting-started-with-minikube">Getting started with minikube</h1>
+<p>Minikube is a container management and orchestration tool. Useful for
+learning kubernetes and containers. I thought it would be worthwhile to
+install minikube on my computer. Installation is simple with </p>
+<pre><code>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+</code></pre>
+<p>Getting it up and running. Once running we can start minikube with </p>
+<pre><code>minikube start
+</code></pre>
+<p>Many things work better if we have kubectl installed. To do this we curl
+the latest version and install</p>
+<pre><code>curl -LO &quot;https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256&quot;
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+</code></pre>
+<p>To interact with the cluster we can run </p>
+<pre><code>kubectl get po -A
+#or
+minikube dashboard
+</code></pre>
+<p>To deploy a container we use <code>kubectl</code></p>
+<pre><code>kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+</code></pre>
+<p>The expose command will expose the port to port 8080 in this case. The
+image can come from any location. To access the above container we can
+use</p>
+<pre><code>kubectl port-forward service/hello-minikube 7080:8080
+</code></pre>
+<p>There are many more things we can do with minikube. Below are a couple
+from the quickstart</p>
+<pre><code>minikube pause
+minikube unpause
+minikube delete
+</code></pre>
+<p>I plan on trying many things with this tool including:</p>
+<p>Running pihole, duckdns, vpn etc. 
+Installing on rpi cluster</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../20210909111906/" class="btn btn-neutral float-left" title="Go - 100daysofCode -- Day 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../20210911014132/" class="btn btn-neutral float-right" title="Command substitution">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../20210909111906/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../20210911014132/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
